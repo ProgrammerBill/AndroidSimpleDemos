@@ -1,20 +1,26 @@
 package com.bill.activitylifecycle;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private final String TAG = "ActivityLifeCycle";
+    private Button mButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG,"onCreate");
+        mButton = (Button)findViewById(R.id.button);
+        mButton.setOnClickListener(this);
     }
 
     @Override
@@ -63,5 +69,16 @@ public class MainActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         Log.d(TAG,"onConfigurationChanged   ");
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.button:
+                Intent mIntent = new Intent(MainActivity.this, AnotherActivity.class);
+                startActivity(mIntent);
+                break;
+            default:break;
+        }
     }
 }

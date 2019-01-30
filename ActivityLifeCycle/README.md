@@ -28,22 +28,43 @@ Activity的生命周期如下图所示:
 01-29 22:15:48.375 23071 23071 D ActivityLifeCycle: onStop
 ```
 
-当屏幕进行旋转时，观察可得:
+当再次点开该Activity时,不会再调用onCreate:
 
 ```
-01-29 22:30:50.822 24929 24929 D ActivityLifeCycle: onPause
-01-29 22:30:50.829 24929 24929 D ActivityLifeCycle: onStop
-01-29 22:30:50.830 24929 24929 D ActivityLifeCycle: onDestroy
-01-29 22:30:50.946 24929 24929 D ActivityLifeCycle: onCreate
-01-29 22:30:50.955 24929 24929 D ActivityLifeCycle: onStart
-01-29 22:30:50.956 24929 24929 D ActivityLifeCycle: onRestoreInstance
-01-29 22:30:50.957 24929 24929 D ActivityLifeCycle: onResume
+01-30 09:52:10.554 31784 31784 D ActivityLifeCycle: onStart
+01-30 09:52:10.556 31784 31784 D ActivityLifeCycle: onResume
+```
+
+当在该Activity跳转到别的Activity时:
+
+```
+01-30 09:56:28.517 32182 32182 D ActivityLifeCycle: onPause
+01-30 09:56:28.898 32182 32182 D ActivityLifeCycle: onStop
+```
+
+当返回到该Activity时:
+
+```
+01-30 09:56:41.939 32182 32182 D ActivityLifeCycle: onStart
+01-30 09:56:41.940 32182 32182 D ActivityLifeCycle: onResume
+```
+
+
+当屏幕进行旋转时，观察可得Activity会先销毁当前的Activity,在重新创建一个新的，并在onResume前，调用onRestoreInstance
+
+```
+01-30 10:00:01.089 32483 32483 D ActivityLifeCycle: onPause
+01-30 10:00:01.090 32483 32483 D ActivityLifeCycle: onStop
+01-30 10:00:01.091 32483 32483 D ActivityLifeCycle: onDestroy
+01-30 10:00:01.236 32483 32483 D ActivityLifeCycle: onCreate
+01-30 10:00:01.241 32483 32483 D ActivityLifeCycle: onStart
+01-30 10:00:01.242 32483 32483 D ActivityLifeCycle: onRestoreInstance
+01-30 10:00:01.243 32483 32483 D ActivityLifeCycle: onResume
 ```
 
 当AndroidManifest.xml中增添了`android:configChanges="orientation|screenSize"`后，则只会回调onConfigurationChanged:
 
 
 ```
-01-29 22:35:40.896 25547 25547 D ActivityLifeCycle: onConfigurationChanged
-
+01-30 10:01:07.773   432   432 D ActivityLifeCycle: onConfigurationChanged
 ```
