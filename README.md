@@ -3,14 +3,14 @@
 This repository is aim to solve some common problems in Interview.
 
 
-1. [Four Activity Modes for starting.](ActivitiesMode/README.md)
+## 1. [Four Activity Modes for starting.](ActivitiesMode/README.md)
 
 - Standard
 - SingleTop
 - SingleTask
 - SingleInstances
 
-2. [Activity flows](ActivityLifeCycle/README.md)
+## 2. [Activity flows](ActivityLifeCycle/README.md)
 
 - onCreate
 - onStart
@@ -20,7 +20,9 @@ This repository is aim to solve some common problems in Interview.
 - onDestroy
 
 
-3. [Jni Demo](JniDemo/README.md)
+## 3. [Jni Demo(Built in Android SDK)](JniDemo/README.md)
 
 - static registration
 - dynamic registration
+
+## 4. [Jni Demo](JniDemo/README.md)
