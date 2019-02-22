@@ -18,3 +18,9 @@ This repository is aim to solve some common problems in Interview.
 - onPause
 - onStop
 - onDestroy
+
+
+3. [Jni Demo](JniDemo/README.md)
+
+- static registration
+- dynamic registration
