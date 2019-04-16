@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AudioTrackDemo</string>
+    <string name="audio_play">play</string>
+    <string name="audio_stop">stop</string>
+</resources>

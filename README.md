@@ -20,9 +20,11 @@ This repository is aim to solve some common problems in Interview.
 - onDestroy
 
 
-## 3. [Jni Demo(Built in Android SDK)](JniDemo/README.md)
+## 3. [Jni Demo(Built in Android SDK)](JniDemoForAndroidStudio/README.md)
 
 - static registration
 - dynamic registration
 
 ## 4. [Jni Demo](JniDemo/README.md)
+
+## 5. [AudioTrack Demo](AudioTrackDemo/README.md)
