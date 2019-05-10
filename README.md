@@ -29,4 +29,4 @@ This repository is aim to solve some common problems in Interview.
 
 ## 5. [AudioTrack Demo](AudioTrackDemo/README.md)
 
-## 6. [Handler in Threads Deom](HandlerTest/README.md)
+## 6. [Handler in Threads Demo](HandlerTest/README.md)
