@@ -28,3 +28,5 @@ This repository is aim to solve some common problems in Interview.
 ## 4. [Jni Demo](JniDemo/README.md)
 
 ## 5. [AudioTrack Demo](AudioTrackDemo/README.md)
+
+## 6. [Handler in Threads Deom](HandlerTest/README.md)
