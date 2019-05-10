@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">handlerTest</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="ThreadToMainText">ThreadToMain</string>
+    <string name="MainToThreadText">MainToThread</string>
+    <string name="ThreadToThreadText">ThreadToThread</string>
+</resources>
