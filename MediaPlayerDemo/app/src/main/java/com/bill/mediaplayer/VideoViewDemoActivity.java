@@ -20,9 +20,8 @@ import butterknife.OnClick;
 /**
  * @author chenjuncong
  */
-public class VideoViewDemoActivity extends AppCompatActivity {
+public class VideoViewDemoActivity extends AppCompatActivity implements MediaBase {
     private static String TAG = MainActivity.TAG;
-    private static String VIDEO_PATH = "/data/test.mp4";
     @BindView(R.id.videoView)
     VideoView videoView;
     @BindView(R.id.openButton)
@@ -50,26 +49,29 @@ public class VideoViewDemoActivity extends AppCompatActivity {
         videoView.setMediaController(new MediaController(this));
     }
 
-
-    private void openFile() {
+    @Override
+    public void openFile() {
         Log.d(TAG, "openFile");
         videoView.setVideoPath(VIDEO_PATH);
         videoView.resume();
     }
 
-    private void play() {
+    @Override
+    public void play() {
         Log.d(TAG, "play");
         videoView.start();
     }
 
-    private void pause() {
+    @Override
+    public void pause() {
         Log.d(TAG, "pause");
         if (videoView.canPause()) {
             videoView.pause();
         }
     }
 
-    private void stop() {
+    @Override
+    public void stop() {
         Log.d(TAG, "stop");
         videoView.stopPlayback();
     }

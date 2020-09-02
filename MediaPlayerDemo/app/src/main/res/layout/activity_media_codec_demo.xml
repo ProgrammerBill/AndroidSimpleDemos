@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MediaCodecDemoActivity">
 
+    <include layout="@layout/button_list"/>
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="680dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
