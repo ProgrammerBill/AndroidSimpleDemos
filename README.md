@@ -49,3 +49,7 @@ This repository is aim to solve some common problems in Interview.
 ## 7. [Camera Demo](CameraDemo/README.md)
 
 ## 8. [Media Player Demo](MediaPlayerDemo/README.md)
+
+- MediaPlayer Demo for VideoView
+- MediaPlayer Demo for SurfaceView
+- MediaCodec Demo in synchronous mode
