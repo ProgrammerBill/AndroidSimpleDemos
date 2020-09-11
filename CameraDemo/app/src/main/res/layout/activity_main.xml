@@ -4,39 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0099cc"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonPicture"
+        android:id="@+id/DemoTwoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="Take Picture"
-        app:layout_constraintEnd_toStartOf="@+id/buttonVideo"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="360dp"
+        android:text="@string/DemoTwoButton"
+        app:layout_constraintBottom_toBottomOf="@+id/DemoOneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DemoOneButton"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/buttonVideo"
-        android:layout_width="109dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="684dp"
-        android:layout_marginRight="684dp"
-        android:text="TakeVideo"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonPicture"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttonPicture"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/DemoOneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="376dp"
+        android:text="@string/DemoOneButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="503dp"
-        android:layout_height="364dp"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonVideo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toEndOf="@+id/buttonVideo"
-        app:layout_constraintTop_toTopOf="@+id/buttonVideo"
-        app:layout_constraintVertical_bias="0.392" />
 </androidx.constraintlayout.widget.ConstraintLayout>
